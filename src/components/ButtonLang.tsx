@@ -16,10 +16,10 @@ const handleTrans = () => {
 
 const ButtonLang = (props:any) => {
     return (
-        <button onClick={handleTrans} className='mx-3 rounded-full text-white font-[Poppins] py-1 px-1 rounded duration-500'>
+        <button onClick={handleTrans} className=' rounded-full text-white py-1 px-0.5 rounded duration-500'>
             {props.children}
-            <img src={flag} alt="change language"
-                 className="w-10 h-10 p-0 m-0  rounded-full ring-blue-500 ring-4"/>
+            <img src={flag} alt="change language "
+                 className="w-6 h-6 p-0 m-0  rounded-full ring-blue-500 ring-2 grayscale"/>
         </button>
     )
 }

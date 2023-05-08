@@ -7,7 +7,7 @@ const Layout: FC<{ children: ReactNode }> = ({children}) => {
         <main className="">
             {/*<Nav/>*/}
             <div className={""}>
-                <Nav/>
+                {/*<Nav/>*/}
                 {children}
             </div>
         </main>

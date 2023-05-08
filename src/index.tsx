@@ -25,7 +25,7 @@ root.render(
     <BrowserRouter>
         <React.StrictMode>
             <Suspense fallback={loadingMarkup}>
-                <div className={" text-white transition-all duration-500"}>
+                <div className={"transition-all duration-500"}>
                     <Layout>
                         <Routes>
                             <Route path="/" element={<Home/>}/>

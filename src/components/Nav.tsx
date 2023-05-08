@@ -11,7 +11,6 @@ import {RxMoon} from "react-icons/rx";
 
 const Nav = () => {
 
-    const [colorTheme,setTheme] =useDarkMode();
 
     const { t} = useTranslation();
     let Links =[
@@ -53,13 +52,13 @@ const Nav = () => {
                     }
                     <div className={"flex flex-wrap select-none"}>
                         <ButtonLang/>
-                        <div onClick={()=> setTheme(colorTheme)} className={" flex items-center justify-center"}>
+                        {/*<div onClick={() => setTheme(colorTheme)} className={" flex items-center justify-center"}>
 
-                            {colorTheme === 'light'?
+                            {colorTheme === 'light' ?
                                 (<RxMoon size={32}/>) :
                                 (<GiSun size={32}/>)}
 
-                        </div>
+                        </div>*/}
                     </div>
 
                 </ul>
