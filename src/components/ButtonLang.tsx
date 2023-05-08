@@ -6,12 +6,16 @@ import fr_flag from "../assets/img/fr_flag.png";
 
 import cookies from 'js-cookie';
 
+
 let lang = 'fr';
 let flag = cookies.get('i18next') === 'fr' ? fr_flag : en_flag;
 const handleTrans = () => {
     lang =  cookies.get('i18next') === 'fr' ? 'en' : 'fr' ;
     flag = cookies.get('i18next') === 'fr' ? en_flag : fr_flag;
+
     i18n.changeLanguage(lang);
+    window.location.reload();
+
 };
 
 const ButtonLang = (props:any) => {

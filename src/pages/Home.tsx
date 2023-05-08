@@ -51,7 +51,7 @@ function Home() {
 
                 <div className={"p-3 flex flex-col "}>
                     <div className={""}>
-                        <p className={"text-2xl md:text-4xl font-bold "}>Willy Somkhit</p>
+                        <p className={"text-2xl md:text-4xl font-bold "}>Xyphes</p>
                         <p>{t('job')}</p>
                     </div>
                     <span className={"h-8"}/>

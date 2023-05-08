@@ -12,7 +12,6 @@ import {
     SiLinux, SiFlutter, SiGithub, SiReact, SiTailwindcss
 } from "react-icons/si";
 import {FaJava} from "react-icons/fa";
-import {disable} from "workbox-navigation-preload";
 import {useTranslation} from "react-i18next";
 
 
