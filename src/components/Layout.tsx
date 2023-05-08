@@ -1,5 +1,5 @@
 import React, {FC, ReactNode} from "react";
-import Nav from "./Nav";
+
 
 
 const Layout: FC<{ children: ReactNode }> = ({children}) => {

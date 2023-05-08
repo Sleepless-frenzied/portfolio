@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import '../App.css';
 import { useTranslation } from 'react-i18next';
 
-import {FaBeer, FaFolder} from 'react-icons/fa';
 
 import ButtonTheme from "../components/ButtonTheme";
 import ButtonLang from "../components/ButtonLang";
@@ -58,7 +57,7 @@ function Home() {
 
                     {buttonPages.map((page) =>(
                         <button onClick={()=>setComp(page.cmp)} className={"w-max"}>
-                            {page.cmp == comp ? "." : page.name}
+                            {page.cmp === comp ? "." : page.name}
                         </button>
                     ))}
 
