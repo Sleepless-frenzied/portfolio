@@ -25,7 +25,7 @@ function Home() {
 
 
 
-    const  [comp,setComp] = useState(<Who/>);
+    const  [comp,setComp] = useState(t('who'));
 
 
 
@@ -56,8 +56,9 @@ function Home() {
 
 
                     {buttonPages.map((page) =>(
-                        <button onClick={()=>setComp(page.cmp)} className={"w-max"}>
-                            {page.cmp === comp ? "." : page.name}
+                        <button onClick={()=>setComp(page.name)} className={"w-max"}>
+                            {page.name === comp ? "." : page.name}
+
                         </button>
                     ))}
 
@@ -67,7 +68,11 @@ function Home() {
                 <div className={" sm:col-span-2 "}>
                     {/*{isVisible ? <Skills /> : ''}*/}
                     {transition((style,item)=>
-                        item ? <animated.div style={style}><div className={""}>{comp}</div></animated.div> : ''
+                        item ? <animated.div style={style}><div className={""}>{
+                            buttonPages.map((page)=>(
+                                page.name === comp ? page.cmp : <></>
+                            ))
+                        }</div></animated.div> : ''
                     )}
                 </div>
 
