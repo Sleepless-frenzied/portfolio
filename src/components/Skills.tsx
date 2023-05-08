@@ -12,7 +12,8 @@ import {
     SiLinux, SiFlutter, SiGithub, SiReact, SiTailwindcss
 } from "react-icons/si";
 import {FaJava} from "react-icons/fa";
-import {t} from "i18next";
+import {disable} from "workbox-navigation-preload";
+import {useTranslation} from "react-i18next";
 
 
 
@@ -40,10 +41,13 @@ const tools = [
 
 
 export default function Skills(){
-    return (
-        <div className={" p-3 bg-lightModule dark:bg-darkModule h-screen"}>
 
-            <h1 className="mb-2 text-4xl md:text-5xl font-Lato text-left font-bold ml-3 md:ml-0 md:mt-3">{t('skills')}</h1>
+    const { t} = useTranslation();
+
+    return (
+        <div className={"overflow-y-scroll md:overflow-auto bg-lightModule dark:bg-darkModule h-screen"}>
+
+            <h1 className="mb-2 text-xl md:text-5xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:mt-3">{t('skills')}</h1>
             <div className={"flex flex-wrap "}>
                 {skills.map((item, index) => (
                     <div className={`mt-3 mx-2 w-max bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
@@ -54,7 +58,7 @@ export default function Skills(){
                     </div>
                 ))}
             </div>
-            <h1 className="mb-2 text-4xl md:text-5xl font-Lato text-left font-bold ml-3 md:ml-0 md:mt-7">{t('framework')}</h1>
+            <h1 className="mb-2 text-xl md:text-5xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:mt-6">{t('framework')}</h1>
             <div className={"flex flex-wrap "}>
                 {tools.map((item, index) => (
                     <div className={`mt-3 mx-2 w-max bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
@@ -64,6 +68,12 @@ export default function Skills(){
                         </p>
                     </div>
                 ))}
+            </div>
+
+            <div className={""}>
+                <br/>
+                <br/>
+                <br/>
             </div>
 
         </div>

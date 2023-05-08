@@ -40,8 +40,8 @@ function Home() {
 
 
     return (
-        <div className={"h-screen p-16 overflow-hidden"}>
-            <div className=" overflow-hidden relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-cols-3">
+        <div className={"h-screen p-4 sm:p-16 overflow-hidden"}>
+            <div className=" overflow-hidden relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-cols-2 sm:grid-cols-3">
                 {/*<FaBeer className={"text-black text-2xl"}/>
                 <div className={"z-10 animate-spin-slow w-1/3"}>{t("material")}</div>
                 */}
@@ -62,14 +62,9 @@ function Home() {
                     ))}
 
 
-
-
-
-
-
                 </div>
 
-                <div className={" col-span-2 "}>
+                <div className={" sm:col-span-2 "}>
                     {/*{isVisible ? <Skills /> : ''}*/}
                     {transition((style,item)=>
                         item ? <animated.div style={style}><div className={""}>{comp}</div></animated.div> : ''

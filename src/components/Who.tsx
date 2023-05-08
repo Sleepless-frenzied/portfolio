@@ -8,12 +8,12 @@ export default function Who() {
 
     return (
         <div className={""}>
-            <div className={"p-3 bg-lightModule dark:bg-darkModule h-screen overflow-y-auto"}>
+            <div className={" bg-lightModule dark:bg-darkModule h-screen overflow-y-auto"}>
                 <div className="mt-4 mb-5 ">
                     <img src={require("../assets/img/willy.somkhit-square.png")}
                          alt="..." className="w-1/3 mx-auto shadow rounded-full border-none"/>
 
-                    <p className="text-xl mx-6 text-justify">
+                    <p className="text-base md:text-xl mx-6 text-justify">
                         {t('me')}
                     </p>
                     <br/>
