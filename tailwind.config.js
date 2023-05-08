@@ -4,6 +4,10 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
     extend: {
+      backgroundImage:{
+        "dot-pattern": "url('/src/assets/img/White_dot.svg')",
+        "dote-pattern": "url('/src/assets/img/black-dot.png')"
+      },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },

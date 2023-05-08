@@ -10,6 +10,7 @@ import Who from "../components/Who";
 import Contacts from "../components/Contacts";
 import Skills from "../components/Skills";
 import Experiences from "../components/Experiences";
+import Studies from "../components/Studies";
 
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
         {name:t('who'), cmp: <Who/>},
         {name:t('contact'), cmp: <Contacts/>},
         {name:t('skills'), cmp: <Skills/>},
+        {name:t('Studies'),cmp: <Studies/>},
         {name:t('exp'),cmp: <Experiences/>},
     ]
 
