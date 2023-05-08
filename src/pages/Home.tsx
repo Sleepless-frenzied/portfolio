@@ -49,14 +49,14 @@ function Home() {
 
                 <div className={"p-3 flex flex-col "}>
                     <div className={""}>
-                        <p className={"text-2xl"}>Willy Somkhit</p>
+                        <p className={"text-2xl md:text-4xl font-bold "}>Willy Somkhit</p>
                         <p>{t('job')}</p>
                     </div>
                     <span className={"h-8"}/>
 
 
                     {buttonPages.map((page) =>(
-                        <button onClick={()=>setComp(page.name)} className={"w-max"}>
+                        <button onClick={()=>setComp(page.name)} className={`w-max sm:text-xl md:text-3xl ${page.name === comp ? 'text-red-500' : ''} `}>
                             {page.name === comp ? "." : page.name}
 
                         </button>

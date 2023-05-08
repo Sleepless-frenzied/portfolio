@@ -9,8 +9,10 @@ const Layout: FC<{ children: ReactNode }> = ({children}) => {
             <div className={""}>
                 {/*<Nav/>*/}
                 {children}
+
             </div>
         </main>
+
     );
 };
 
