@@ -9,10 +9,11 @@ import Layout from './components/Layout';
 import Home from "./pages/Home";
 
 import './i18n'
+import Test from "./pages/test";
 
 
 
-const loadingMarkup = (
+const loadingMarkup =(
     <div className="py-4 text-center">
         <h3>Loading...</h3>
     </div>
@@ -29,6 +30,7 @@ root.render(
                     <Layout>
                         <Routes>
                             <Route path="/" element={<Home/>}/>
+                            <Route path="/test" element={<Test/>}/>
                             <Route path="*" element={<Error404/>}/>
                         </Routes>
                     </Layout>

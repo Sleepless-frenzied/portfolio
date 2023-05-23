@@ -43,7 +43,7 @@ function Home() {
 
     return (
         <div className={"h-screen p-4 sm:p-16 overflow-hidden"}>
-            <div className=" overflow-hidden relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-cols-2 sm:grid-cols-3">
+            <div className=" overflow-hidden relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-rows-2 sm:grid-cols-3">
                 {/*<FaBeer className={"text-black text-2xl"}/>
                 <div className={"z-10 animate-spin-slow w-1/3"}>{t("material")}</div>
                 */}
@@ -51,7 +51,7 @@ function Home() {
 
                 <div className={"p-3 flex flex-col "}>
                     <div className={""}>
-                        <p className={"text-2xl md:text-4xl font-bold "}>Xyphes</p>
+                        <p className={"text-2xl md:text-4xl font-bold "}>Willy Somkhit</p>
                         <p>{t('job')}</p>
                     </div>
                     <span className={"h-8"}/>
@@ -67,7 +67,7 @@ function Home() {
 
                 </div>
 
-                <div className={" sm:col-span-2 "}>
+                <div className={"max-sm:overflow-auto sm:col-span-2 "}>
                     {/*{isVisible ? <Skills /> : ''}*/}
                     {transition((style,item)=>
                         item ? <animated.div style={style}><div className={""}>{
@@ -79,7 +79,7 @@ function Home() {
                 </div>
 
 
-                <div className={"absolute ml-2 mb-1.5 bottom-0 left-0  flex flex-col"}>
+                <div className={"invisible sm:visible absolute ml-2 mb-1.5 bottom-0 left-0  flex flex-col"}>
                     <ButtonLang/>
                     <span className={"h-2"}></span>
                     <ButtonTheme/>
