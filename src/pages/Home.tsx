@@ -50,7 +50,7 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 overflow-hidden">
+        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 overflow-y-scroll">
             <div className="p-3 flex flex-col">
                 <div>
                     <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold">Willy Somkhit</p>
@@ -71,18 +71,16 @@ const Home: React.FC = () => {
                 ))}
             </div>
 
-            <div>
-                {transitions((styles, item) =>
-                    item ? (
-                        <animated.div
-                            className="h-full absolute w-full sm:top-0 sm:right-0 sm:w-1/2 xl:w-3/4 bg-white"
-                            style={styles}
-                        >
-                            {activeComponent}
-                        </animated.div>
-                    ) : null
-                )}
-            </div>
+            {transitions((styles, item) =>
+                item ? (
+                    <animated.div
+                        className=" h-full absolute w-full sm:top-0 sm:right-0 sm:w-1/2 xl:w-3/4 bg-white"
+                        style={styles}
+                    >
+                        {activeComponent}
+                    </animated.div>
+                ) : null
+            )}
 
             <div className="invisible sm:visible absolute ml-2 mb-1.5 bottom-0 left-0 flex flex-col">
                 <ButtonLang />

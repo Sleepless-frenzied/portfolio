@@ -3,6 +3,7 @@ import {useTranslation} from "react-i18next";
 
 
 import epita from "../assets/img/epita.png";
+import hw from "../assets/img/hw.png";
 import fb from "../assets/img/fb.png";
 
 export default function Studies() {
@@ -14,29 +15,29 @@ export default function Studies() {
         {
             name: "EPITA",
             from: 2020,
-            to: 2025,
+            to: 2026,
             logo: epita,
-
+            description: "epita"
+        },
+        {
+            name: "Heriot-watt",
+            from:2014,
+            in: 2022,
+            logo: hw,
+            description: "hw"
         },
         {
             name: "Francs-Bourgeois",
-            from:2014,
-            in: 2022,
-            logo: fb,
-
-        },
-        {
-            name: "Francoise Cabrini",
             from: 2017,
             to: 2020,
             logo: fb,
-
+            description: "fb"
         }
     ]
 
     return (
         <div className={" bg-lightModule dark:bg-darkModule h-full pt-12"}>
-            <ul className="ml-3 flex flex-col">
+            <ul className="ml-1 md:ml-3 flex flex-col">
                 {studies.map((study, index) =>
                     <li key={study.name} className="flex">
                         {/*picture*/}
@@ -53,7 +54,7 @@ export default function Studies() {
                                 <span
                                     className="bg-blue-700 ml-3 py-1 px-2 rounded-full flex-none">{study.in ? study.in : study.from + " - " + study.to}</span>
                             </div>
-                            <span>{t("r")}</span>
+                            <span>{t(study.description)}</span>
                         </div>
                     </li>
                 )}
