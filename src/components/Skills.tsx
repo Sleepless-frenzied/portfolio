@@ -44,12 +44,12 @@ export default function Skills(){
     const { t} = useTranslation();
 
     return (
-        <div className={"overflow-auto bg-lightModule dark:bg-darkModule h-screen"}>
+        <div className={" bg-lightModule dark:bg-darkModule h-full"}>
 
-            <h1 className="mb-2 text-xl md:text-5xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:mt-3">{t('skills')}</h1>
+            <h1 className=" text-xl md:text-5xl xl:text-8xl  font-Lato text-left font-bold ml-1 md:ml-1.5 md:pt-3">{t('skills')}</h1>
             <div className={"flex flex-wrap "}>
                 {skills.map((item, index) => (
-                    <div className={`mt-3 mx-2 w-max bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
+                    <div className={`mt-3 mx-2 w-max xl:text-5xl  bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
                         {item.icon}
                         <p key={index}>
                             {item.lang}
@@ -57,10 +57,10 @@ export default function Skills(){
                     </div>
                 ))}
             </div>
-            <h1 className="mb-2 text-xl md:text-5xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:mt-6">{t('framework')}</h1>
+            <h1 className="mb-2 text-xl md:text-5xl xl:text-8xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:mt-6">{t('framework')}</h1>
             <div className={"flex flex-wrap "}>
                 {tools.map((item, index) => (
-                    <div className={`mt-3 mx-2 w-max bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
+                    <div className={`mt-3 mx-2 w-max xl:text-5xl bg-lightButton dark:bg-darkButton flex items-stretch px-4 py-3 hover:scale-110 duration-300 font-bold rounded-full`}>
                         {item.icon}
                         <p key={index}>
                             {item.lang}
@@ -69,11 +69,6 @@ export default function Skills(){
                 ))}
             </div>
 
-            <div className={""}>
-                <br/>
-                <br/>
-                <br/>
-            </div>
 
         </div>
     )

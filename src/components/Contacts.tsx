@@ -14,24 +14,22 @@ const links=[
 
 export default function Who() {
     return (
-        <div className={""}>
-            <div className={"pt-6 sm:px-3 bg-lightModule dark:bg-darkModule h-screen"}>
+        <div className={"pt-6 sm:px-3 bg-lightModule dark:bg-darkModule h-full"}>
 
-                {links.map((link, index) => (
-                    <>
-                        <div className={"mx-3 sm:mx-6  hover:scale-110 duration-300 sm:text-2xl p-3 overflow-clip sm:p-6 bg-lightButton dark:bg-darkButton flex items-stretch h-max rounded-full "}>
-                            {link.icon}
-                            <a href={link.url}
-                               target="_blank"
-                               rel="noreferrer noopener">
-                                {link.name}
-                            </a>
-                        </div>
-                        <br/>
-                    </>
-                ))}
+            {links.map((link, index) => (
+                <>
+                    <div className={"mx-3 sm:mx-6  hover:scale-110 duration-300 text-xl sm:text-2xl p-3 overflow-clip sm:p-6 bg-lightButton dark:bg-darkButton flex items-stretch h-max rounded-full "}>
+                        {link.icon}
+                        <a href={link.url}
+                           target="_blank"
+                           rel="noreferrer noopener">
+                            {link.name}
+                        </a>
+                    </div>
+                    <br/>
+                </>
+            ))}
 
-            </div>
         </div>
     )
 }
