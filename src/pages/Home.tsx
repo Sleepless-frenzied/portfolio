@@ -50,8 +50,8 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-rows-[min-content_1fr] md:grid-rows-1 md:grid-cols-2 overflow-hidden">
-            <div className="p-3 flex flex-col">
+        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-rows-[min-content_1fr] md:grid-rows-1 md:grid-cols-[min-content_1fr] overflow-hidden">
+            <div className="p-3 mr-10 flex flex-col">
                 <div>
                     <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold">Willy Somkhit</p>
                     <p className={"text-xl md:text-2xl  2xl:text-3xl"}>{t('job')}</p>
