@@ -50,7 +50,7 @@ const Home: React.FC = () => {
     };
 
     return (
-        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 overflow-y-scroll">
+        <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-cols-1 md:grid-cols-2 overflow-hidden">
             <div className="p-3 flex flex-col">
                 <div>
                     <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold">Willy Somkhit</p>
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             {transitions((styles, item) =>
                 item ? (
                     <animated.div
-                        className=" h-full absolute w-full sm:top-0 sm:right-0 sm:w-1/2 xl:w-3/4 bg-white"
+                        className="overflow-y-auto h-full bg-lightModule dark:bg-darkModule"
                         style={styles}
                     >
                         {activeComponent}

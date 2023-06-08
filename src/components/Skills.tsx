@@ -44,7 +44,7 @@ export default function Skills(){
     const { t} = useTranslation();
 
     return (
-        <div className={" bg-lightModule dark:bg-darkModule h-full overflow-y-scroll"}>
+        <div className={" bg-lightModule dark:bg-darkModule h-full"}>
 
             <h1 className=" text-xl md:text-5xl 2xl:text-6xl font-Lato text-left font-bold ml-1 md:ml-1.5 md:pt-3">{t('skills')}</h1>
             <div className={"flex flex-wrap "}>
