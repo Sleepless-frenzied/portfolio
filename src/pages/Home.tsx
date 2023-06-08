@@ -53,8 +53,8 @@ const Home: React.FC = () => {
         <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 overflow-hidden">
             <div className="p-3 flex flex-col">
                 <div>
-                    <p className="text-2xl md:text-4xl font-bold">Willy Somkhit</p>
-                    <p>{t('job')}</p>
+                    <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold">Willy Somkhit</p>
+                    <p className={"text-xl md:text-2xl  2xl:text-3xl"}>{t('job')}</p>
                 </div>
                 <span className="h-8" />
 
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
                     <button
                         key={page.name}
                         onClick={() => handleClick(page.name)}
-                        className={`w-max sm:text-xl md:text-3xl ${
+                        className={`w-max sm:text-xl md:text-3xl 2xl:text-6xl ${
                             page.name === comp ? 'text-red-500' : ''
                         }`}
                     >
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
                 {transitions((styles, item) =>
                     item ? (
                         <animated.div
-                            className="h-full absolute w-full sm:top-0 sm:right-0 sm:w-1/2 2xl:w-3/4 bg-white"
+                            className="h-full absolute w-full sm:top-0 sm:right-0 sm:w-1/2 xl:w-3/4 bg-white"
                             style={styles}
                         >
                             {activeComponent}
