@@ -9,8 +9,10 @@ module.exports = {
         "dote-pattern": "url('/src/assets/img/black-dot.png')"
       },
       animation: {
+
         'spin-slow': 'spin 3s linear infinite',
       },
+
       colors:{
         'light': '#f1f2f4',
         'lightNav':"#fdfdfe",
@@ -35,6 +37,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }
 

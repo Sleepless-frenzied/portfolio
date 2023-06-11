@@ -6,7 +6,7 @@ interface ButtonItem {
     text: string;
 }
 
-const Test: React.FC = () => {
+const ButtonList = (props:any) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleList = () => {
@@ -29,11 +29,11 @@ const Test: React.FC = () => {
     });
 
     return (
-        <div className="button-list flex flex-col">
+        <div className="button-list">
             <button className="main-button" onClick={toggleList}>
                 Afficher la liste
             </button>
-            <div className="button-list-items flex flex-col">
+            <div className="button-list-items flex flex-col ">
                 {transitions((style, item) => (
                     <animated.button className="list-button" style={style} key={item.id}>
                         {item.text}
@@ -42,6 +42,6 @@ const Test: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Test;
+export default ButtonList
