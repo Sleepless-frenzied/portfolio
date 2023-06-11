@@ -89,18 +89,19 @@ const Home: React.FC = () => {
                 ) : null
             )}
 
+            <WhatsappShareButton
+                url={shareUrl}
+                title={title}
+
+            >
+                <FaWhatsapp size={32} />
+            </WhatsappShareButton>
             <div className="invisible sm:visible absolute ml-2 mb-1.5 bottom-0 left-0 flex flex-col">
                 <ButtonList/>
                 <ButtonLang />
                 <span className="h-2"></span>
                 <ButtonTheme />
-                <WhatsappShareButton
-                    url={shareUrl}
-                    title={title}
 
-                >
-                    <FaWhatsapp size={32} />
-                </WhatsappShareButton>
             </div>
         </div>
     );
