@@ -11,8 +11,7 @@ import Skills from '../components/Skills';
 import Experiences from '../components/Experiences';
 import Studies from '../components/Studies';
 import ButtonList from "../components/ButtonList";
-import WhatsappShareButton from 'react-share/lib/WhatsappShareButton';
-import { FaWhatsapp } from 'react-icons/fa';
+
 
 interface ButtonPage {
     name: string;
@@ -52,15 +51,12 @@ const Home: React.FC = () => {
         }
     };
 
-    const shareUrl = 'http://github.com';
-    const title = 'GitHub';
-
-
     return (
         <div className="relative bg-light dark:bg-dark border-lightDivi dark:border-darkDivi h-full border-8 grid grid-rows-[min-content_1fr] md:grid-rows-1 md:grid-cols-[min-content_1fr] overflow-hidden">
             <div className="p-3 mr-10 flex flex-col">
                 <div>
                     <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold">Willy Somkhit</p>
+                    <br/>
                     <p className={"text-xl md:text-2xl  2xl:text-3xl"}>{t('job')}</p>
                 </div>
                 <span className="h-8" />
@@ -69,7 +65,7 @@ const Home: React.FC = () => {
                     <button
                         key={page.name}
                         onClick={() => handleClick(page.name)}
-                        className={`w-max sm:text-xl md:text-3xl 2xl:text-6xl ${
+                        className={`w-max  ${
                             page.name === comp ? 'text-red-500' : ''
                         }`}
                     >
@@ -89,17 +85,10 @@ const Home: React.FC = () => {
                 ) : null
             )}
 
-            <WhatsappShareButton
-                url={shareUrl}
-                title={title}
 
-            >
-                <FaWhatsapp size={32} />
-            </WhatsappShareButton>
-            <div className="invisible sm:visible absolute ml-2 mb-1.5 bottom-0 left-0 flex flex-col">
+            <div className=" absolute ml-2 mb-1.5 max-md:top-0 max-md:right-0 md:bottom-0 md:left-0 flex flex-col">
                 <ButtonList/>
                 <ButtonLang />
-                <span className="h-2"></span>
                 <ButtonTheme />
 
             </div>

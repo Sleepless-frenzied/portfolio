@@ -12,7 +12,7 @@ export default function Who() {
             <img src={require("../assets/img/willy.somkhit-square.png")}
                  alt="..." className="w-1/3 2xl:w-1/4 mx-auto shadow rounded-full border-none"/>
 
-            <p className="text-base md:text-xl 2xl:text-5xl text-justify">
+            <p className=" text-justify">
                 {t('me')}
             </p>
             <br/>
