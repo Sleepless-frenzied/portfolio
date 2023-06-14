@@ -22,6 +22,7 @@ export default function Who() {
                         {link.icon}
                         <a href={link.url}
                            target="_blank"
+                           className={"w-full"}
                            rel="noreferrer noopener"
                            key={index}
                         >
