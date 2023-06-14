@@ -16,7 +16,7 @@ export default function Who() {
                 {t('me')}
             </p>
             <br/>
-            <div className={"flex items-center justify-center "}>
+            <div className={"flex items-center justify-center flex-col"}>
                 <div className={ "hover:scale-110 duration-300"}>
                     <br/>
                     <a href={process.env.PUBLIC_URL + '/CV.pdf'}
@@ -26,6 +26,14 @@ export default function Who() {
                        rel="noreferrer noopener">{t('cv')}
                     </a>
                 </div>
+                <br/><br/>
+                <br/>
+                <a href={process.env.PUBLIC_URL + '/Lettre-de-recommandation-Willy-Somkhit.pdf'}
+                   className="md:text-xl 2xl:text-5xl rounded-full py-3 px-4  2xl:py-6 2xl:px-8 text-xl font-bold text-center bg-blue-700 text-white "
+                   download="Lettre-de-recommandation-Willy-Somkhit.pdf"
+                   target="_blank"
+                   rel="noreferrer noopener">{t('lr')}
+                </a>
             </div>
 
         </div>

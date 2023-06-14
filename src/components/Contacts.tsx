@@ -18,11 +18,13 @@ export default function Who() {
 
             {links.map((link, index) => (
                 <>
-                    <div className={"mx-3 sm:mx-6  hover:scale-110 duration-300 text-xl sm:text-2xl p-3 overflow-clip sm:p-6 bg-lightButton dark:bg-darkButton flex items-stretch h-max rounded-full "}>
+                    <div key={index} className={"mx-3 sm:mx-6  hover:scale-110 duration-300 text-xl sm:text-2xl p-3 overflow-clip sm:p-6 bg-lightButton dark:bg-darkButton flex items-stretch h-max rounded-full "}>
                         {link.icon}
                         <a href={link.url}
                            target="_blank"
-                           rel="noreferrer noopener">
+                           rel="noreferrer noopener"
+                           key={index}
+                        >
                             {link.name}
                         </a>
                     </div>

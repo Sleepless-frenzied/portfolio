@@ -86,10 +86,13 @@ const Home: React.FC = () => {
             )}
 
 
-            <div className=" absolute ml-2 mb-1.5 max-md:top-0 max-md:right-0 md:bottom-0 md:left-0 flex flex-col">
+            <div className=" absolute ml-2 mb-1.5 max-md:top-0 max-md:right-0 md:bottom-0 md:left-0 flex flex-row-reverse md:flex-col-reverse md-max:gap-2">
+
+                <div className={"flex flex-col gap-2"}>
+                    <ButtonLang/>
+                    <ButtonTheme />
+                </div>
                 <ButtonList/>
-                <ButtonLang />
-                <ButtonTheme />
 
             </div>
         </div>

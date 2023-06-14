@@ -4,12 +4,14 @@ import {
     EmailShareButton,
     FacebookMessengerShareButton,
     FacebookShareButton,
-    InstapaperShareButton,
     TwitterShareButton,
     WhatsappShareButton
 } from 'react-share';
 import {FaFacebookMessenger, FaInstagram, FaLink, FaMailBulk, FaTwitter, FaWhatsapp} from 'react-icons/fa';
 import {HiOutlineDotsCircleHorizontal} from 'react-icons/hi';
+
+
+
 
 interface ButtonItem {
     id: number;
@@ -31,8 +33,9 @@ const ButtonList = (props: any) => {
     const shareUrl = window.location.href;
     const title = 'GitHub';
     const size = 32;
+
     const buttonList: (ButtonItem | ShareableItem)[] = [
-        { id: 1,
+        { id: 0,
             icon:
                 <FaLink size={size} onClick={() => {navigator.clipboard.writeText(shareUrl)}}/>},
         { id: 1,
@@ -45,15 +48,6 @@ const ButtonList = (props: any) => {
                 >
                     <FaWhatsapp  size={size}  />
                 </WhatsappShareButton>},
-        { id: 1,
-            icon:
-                <InstapaperShareButton
-                    url={shareUrl}
-                    title={title}
-                    className="Demo__some-network__share-button"
-                >
-                    <FaInstagram size={size}/>
-                </InstapaperShareButton>},
         { id: 2,
             icon:
                 <EmailShareButton
@@ -109,7 +103,9 @@ const ButtonList = (props: any) => {
                 <div className={`flex flex-col ${isOpen?'':'invisible'}`}>
                     {transitions((style, item) => (
                         <animated.div style={style} key={item.id}>
-                            <animated.button className="list-button">
+                            <animated.button className="list-button" onClick={()=>{
+                                setIsOpen(false);
+                            }}>
                                 {item.icon}
                             </animated.button>
                             {/*item.hasOwnProperty('icon') ? (
