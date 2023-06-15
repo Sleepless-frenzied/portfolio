@@ -9,7 +9,7 @@ import {
     SiOcaml,
     SiPython,
     SiUnity,
-    SiLinux, SiFlutter, SiGithub, SiReact, SiTailwindcss
+    SiLinux, SiFlutter, SiGithub, SiReact, SiTailwindcss, SiTypescript
 } from "react-icons/si";
 import {FaJava} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
@@ -22,6 +22,7 @@ const skills =
         {lang: "C", color: "blue", icon: <SiC className={"m-1"}/>},
         {lang: "C++", color: "blue", icon: <SiCplusplus className={"m-1"}/>},
         {lang: "JavaScript", color: "blue", icon: <SiJavascript className={"m-1"}/>},
+        {lang: "JavaScript", color: "blue", icon: <SiTypescript className={"m-1"}/>},
         {lang: "HTML", color: "blue", icon: <SiHtml5 className={"m-1"}/>},
         {lang: "CSS", color: "blue", icon: <SiCss3 className={"m-1"}/>},
         {lang: "Java", color: "blue", icon: <FaJava className={"m-1"}/>},
